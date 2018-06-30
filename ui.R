@@ -14,7 +14,9 @@ ui <- dashboardPage( skin = "purple",
                      dashboardSidebar(
                        sidebarMenu(
                          menuItem("Plot", tabName = "onevar", icon = icon("line-chart")),
-                         menuItem("data table", tabName = "twovar", icon = icon ("table")) 
+                         menuItem("data table", tabName = "twovar", icon = icon ("table")),
+                         menuItem("Source code", icon = icon("cog", lib = "glyphicon"), 
+                                  href = "https://github.com/Fahim-Ahmad/Afghanistan-Population-Estimation") 
                        ),
                        br(),
                        selectInput("var1", "Select province", choices = unique(cso$province), selected = "Kabul"),
